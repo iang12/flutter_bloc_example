@@ -1,6 +1,6 @@
 # flutter_bloc_example
 
-<img src="print.jpg" height="500em"/>
+<img src="print.png" height="500em"/>
 
 ## Getting Started
 
