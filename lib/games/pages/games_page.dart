@@ -24,6 +24,7 @@ class _GamesPageState extends State<GamesPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Games List'),
+        centerTitle: true,
       ),
       body: BlocBuilder<GameBloc, StateGames>(
         builder: (_, state) {
@@ -36,10 +37,11 @@ class _GamesPageState extends State<GamesPage> {
             return GridView.builder(
               itemCount: state.games.length,
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  mainAxisSpacing: 10,
-                  crossAxisCount: 2,
-                  childAspectRatio: 1.7,
-                  crossAxisSpacing: 10.0),
+                mainAxisSpacing: 10,
+                crossAxisCount: 2,
+                childAspectRatio: 1.7,
+                crossAxisSpacing: 10.0,
+              ),
               itemBuilder: (_, int index) {
                 var game = state.games[index];
                 return Card(

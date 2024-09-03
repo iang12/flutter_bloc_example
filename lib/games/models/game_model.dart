@@ -10,4 +10,12 @@ class GameModel {
     required this.backgroundImage,
     required this.rating,
   });
+  factory GameModel.fromJson(Map<String, dynamic> json) {
+    return GameModel(
+      backgroundImage: json['background_image'],
+      id: json['id'],
+      rating: json['rating'],
+      name: json['name'],
+    );
+  }
 }
